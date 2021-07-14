@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .img {
+            width: 70%;
+            height: auto;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Style the content */
+        .content {
+            color: #ddd;
+            font-size: 32;
+            background-color: black;
+            height: 100%;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .img-game {
+            width: 30%;
+            height: auto;
+        }
+
+        #send-form {
+            font-size: 24px;
+        }
+
+        .buttonz {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            background-color: #4CAF50;
+        }
+
+        /* Container for flexboxes */
+        .row {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        /* Create three unequal columns that sits next to each other */
+        .column {
+            padding: 10px;
+            height: 900px;
+            /* Should be removed. Only for demonstration */
+            background-color: black;
+            color: black;
+        }
+
+        /* Left and right column */
+        .column.side {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+
+        /* Middle column */
+        .column.middle {
+            -webkit-flex: 2;
+            -ms-flex: 2;
+            flex: 2;
+        }
+
+        .Marquee-box {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 80px;
+        }
+
+        .MyMarquee {
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            font-size: 25px;
+            color: #FFFFFF;
+            font-family: Arial, Helvetica, sans-serif;
+            vertical-align: middle;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background-color: #708090;
+
+        }
+
+        .MyMarquee div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .MyMarquee a,
+        .MyMarquee img {
+            display: inline-block;
+            text-decoration: underline;
+            color: #708090;
+            vertical-align: middle;
+        }
+
+
+        /* Style the footer */
+        .footer {
+            background-color: black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <marquee behavior="" direction=""><a href="#">COVID E-Sport 2021 !!! --- Co-Activity for gamers in COVID
+                situation ---</a></marquee>
+    </div>
+
+    <div class="content" aria-label="Banner">
+
+
+        <div class="row">
+            <div class="column side" style="background-color:black;">
+                <img src="https://futhead.cursecdn.com/static/img/21/players_alt/p117593591.png" alt="" style="width: 80%; height:auto">
+            </div>
+            <div class="column middle" style="background-color:#708090;">
+                <img class="img" src="https://mooc.psu.ac.th/wp-content/uploads/2020/10/psumooc-0025-event.jpg" alt="">
+                <h2>COVID E-Sport Registration</h2>
+                <img class="img-game"
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/9a08f27c-30ec-4158-8613-4da1bf857d91/dayag0w-fd2872df-ca31-437f-8121-2297b104d57f.png"
+                    alt="">
+                <br><br>
+                <div role="form" id="send-form" aria-label="Add a info">
+                    <label for="Firstname">Firstname</label>
+                    <input id="firstname" name="firstname" autocomplete="firstname" autocorrect="off" type="text">
+
+                    &nbsp;&nbsp;&nbsp;
+                    <label for="Lastname">Lastname</label>
+                    <input id="Lastname" name="Lastname" autocomplete="Lastname" autocorrect="off" type="text">
+
+                    <br>
+                    <br>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off"
+                        spellcheck="false" type="text">
+                    &nbsp;&nbsp;&nbsp;
+                    <label for="Tel">Tel</label>
+                    <input id="tel" name="tel" autocomplete="tel" autocapitalize="off" autocorrect="off"
+                        spellcheck="false" type="text">
+
+                    <br>
+                    <br>
+
+                    <label for="listbox1">Select a color:</label>
+                    <select id="listbox1">
+                        <option selected>Battlefield 1</option>
+                        <option>Dota 2</option>
+                        <option>Fifa 21</option>
+                        <option>Counter strike</option>
+                        <option>Valorant</option>
+                        <option>Freefire</option>
+                    </select>
+
+                    <br>
+                    <br>
+
+                    <button class="buttonz" onclick="window.alert('Thanks for registering!')">Submit</button>
+                    
+                    <br>
+                    <br>
+                    
+                    <div class="Marquee-box">
+                        <marquee class="MyMarquee" id="my_marquee" direction="left" behavior="3" scrollamount="6"
+                            onmouseover="this.stop()" onmouseout="this.start()" loop="100">
+                            <div><img src="https://i.pinimg.com/originals/6d/7e/af/6d7eaffe9915c8f4999de69f0c021b42.png"
+                                    width="220" height="80" alt="marquee image"></div>
+                            <div><img
+                                    src="https://ecoacher.com/packages/c5box_responsive/themes/responsive/img/games/valorant-logo.png"
+                                    width="200" height="80" alt="marquee image"></div>
+                            <div><img
+                                    src="https://i1.wp.com/gamehunt.co/wp-content/uploads/2019/12/battlefield-1-bg.png?fit=1600%2C900&ssl=1"
+                                    width="170" height="80" alt="marquee image"></div>
+                            <div><img src="https://i.pinimg.com/originals/d9/ae/ce/d9aece8e5f4c0d6ec9b813c529024394.jpg"
+                                    width="200" height="80" alt="marquee image"></div>
+                            <div><img src="https://www.fifplay.com/img/public/fifa-21-logo.png" width="320" height="80"
+                                    alt="marquee image"></div>
+                            <div><img src="https://senpai.gg/img/dota2-logo.5c496b3.png" width="300" height="80"
+                                    alt="marquee image"></div>
+                        </marquee>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column side" style="background-color:black;">
+                <img src="https://www.futwiz.com/assets/img/fifa21/faces/167792961.png" alt="" style="width: 90%; height: auto">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+
+</html>
